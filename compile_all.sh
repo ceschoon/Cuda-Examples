@@ -11,3 +11,9 @@ nvcc -o saxpy_gpu saxpy.cu
 gcc -O3 -fopenmp -o saxpy_cpus saxpy.c
 cd ..
 
+echo "Compiling prime numbers example"
+cd prime_numbers
+nvcc -o primes_gpu primes.cu
+g++ -O3 -o primes_cpu primes.cpp
+cd ..
+
